@@ -22,7 +22,7 @@
  			AND
  			#{price} >= `price`
  		ORDER BY
- 			`updatedAt` DESC
+ 			`createdAt` DESC
 
  	</select>
  

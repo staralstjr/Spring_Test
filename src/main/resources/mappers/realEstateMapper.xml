@@ -61,7 +61,7 @@
 
  	</select>
  	
- 	<insert id="insertRealEstateFromObject" parameterType="map">
+ 	<insert id="insertRealEstateFromObject" parameterType="com.staralstjr.spring.lesson03.model.RealEstate">
  		INSERT INTO `real_estate`
  		(
  			`realtorId`
@@ -111,5 +111,24 @@
  		)
  		
  	</insert>
+ 	
+ 	<update id="updateRealEstate" parameterType="map">
+ 		UPDATE
+ 			`real_estate`
+ 		SET
+ 			`type` = #{type}
+ 			`price` = #{price}
+ 		WHERE
+ 			`id` = #{id}
+ 	</update>
+ 	
+ 	<delete id="deleteRealEstate" parameterType="map">
+ 		DELETE
+ 		FROM
+ 			`real_estate`
+ 		WHERE
+ 			`id` = #{id}
+ 	
+ 	</delete>
  </mapper>
  

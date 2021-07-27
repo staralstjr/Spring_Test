@@ -31,7 +31,7 @@ public class RealEstateController {
 	}
 	
 	@RequestMapping("/lesson03/test02/1")
-	public String test01() {
+	public String test02_1() {
 		RealEstate realEstate = new RealEstate();
 		
 		realEstate.setRealtorId(3);
@@ -46,12 +46,28 @@ public class RealEstateController {
 	}
 	
 	@RequestMapping("/lesson03/test02/2")
-	public String test02() {
-		int count = realEstateBO.addRealEstate(0, "썅떼빌리버 오피스텔 814호", 45, "월세", 100000, 120);
+	public String test02_2(
+			@RequestParam("realtorId") int realtorId) {
+		int count = realEstateBO.addRealEstate(realtorId, "썅떼빌리버 오피스텔 814호", 45, "월세", 100000, 120);
 		
 		return "입력 성공 : " + count;
 	}
 	
+	@RequestMapping("/lesson03/test03")
+	public String test03(
+			@RequestParam("id") int id,
+			@RequestParam("type") String type,
+			@RequestParam("price") int price) {
+		int count = realEstateBO.updateRealEstate(id, type, price);
+		return "update 성공 : " + count;
+	}
+	
+	@RequestMapping("/lesson03/test04")
+	public String test04(
+			@RequestParam("id") int id) {
+		int count = realEstateBO.deleteRealEstate(id);
+		return "delete 성공 : " + count;
+	}
 }
 
 	

@@ -116,7 +116,7 @@
  		UPDATE
  			`real_estate`
  		SET
- 			`type` = #{type}
+ 			`type` = #{type},
  			`price` = #{price}
  		WHERE
  			`id` = #{id}

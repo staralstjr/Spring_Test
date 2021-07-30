@@ -35,7 +35,7 @@
 	
 	<h3> 5. JSTL core if 2</h3>
 	<c:if test="${number1 * number2 > 100 }">
-		<script>alert("너무 큰 수 입니다.")</script>
+	<c:out value="<script>alert('너무 큰 수 입니다.')</script>" escapeXml="false"/>
 	</c:if>
 	
 </body>

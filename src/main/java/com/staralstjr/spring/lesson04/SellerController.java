@@ -27,11 +27,8 @@ public class SellerController {
 	}
 	
 	@RequestMapping("/test01/seller_info")
-	public String sellerInfo(
-			@RequestParam("nickname") String nickname
-			,@RequestParam("profileImageUrl") String profileImageUrl
-			, @RequestParam("temperature") double temperature) {
-		int count = sellerBO.addSeller(nickname, profileImageUrl, temperature);
+	public String sellerInfo() {
+		
 		return "lesson04/sellerAdd";
 	}
 }

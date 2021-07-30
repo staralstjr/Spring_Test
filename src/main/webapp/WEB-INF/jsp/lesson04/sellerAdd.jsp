@@ -15,7 +15,6 @@
 <body>
 	<div class="container">
 		<h1> ${subject }</h1>
-		<img src=${result.profileImageUrl } >
 		<h3> ${result.temperature }</h3>
 	</div>
 </body>
